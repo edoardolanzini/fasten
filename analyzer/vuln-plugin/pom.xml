@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>eu.fasten</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>vuln-plugin</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq</artifactId>
+            <version>3.12.3</version>
+            <!-- The scope should be provided. Since JOOQ is provided in the JAR of the FASTEN server -->
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <!-- This dependency can be removed once jOOQ v3.15 is out,
+                because the required functionality will be implemented there -->
+            <groupId>com.github.t9t.jooq</groupId>
+            <artifactId>jooq-postgresql-json</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
